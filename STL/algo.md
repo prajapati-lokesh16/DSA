@@ -48,20 +48,34 @@
 
 # Reverse
 
-    ```c++
-    reverse(vec.begin() + 1,vec.end());
-    cout << "reversed vector from index 1 : ";
-    for(int i : vec)
-    {
-        cout << i << " ";
-    }
-    ```
+```c++
+reverse(vec.begin() + 1,vec.end());
+cout << "reversed vector from index 1 : ";
+for(int i : vec)
+{
+    cout << i << " ";
+}
+```
 
 # Next permutation and previous permutation
+```c++
+string s = "abc";
+next_permutation(s.begin(),s.end());
+cout << "Next Permutation : " << s << endl;
+prev_permutation(s.begin(),s.end());
+cout << "Previous Permutation : " << s << endl;
+```
+
+# Min, Max and Swap function
+```c++
+int a = 4, b = 7;
+cout << "Max of a and b : " << max(a,b) << endl;
+cout << "Min of a and b : " << min(a,b) << endl;
+```
+
+# Min and Max in vector
     ```c++
-    string s = "abc";
-    next_permutation(s.begin(),s.end());
-    cout << "Next Permutation : " << s << endl;
-    prev_permutation(s.begin(),s.end());
-    cout << "Previous Permutation : " << s << endl;
+    cout << "Min : " << *min_element(vec.begin(),vec.end()) << endl;
+    cout << "Max : " << *max_element(vec.begin(),vec.end()) << endl;
     ```
+    

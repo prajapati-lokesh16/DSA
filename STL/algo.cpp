@@ -63,5 +63,21 @@ int main()
     cout << "Next Permutation : " << s << endl;
     prev_permutation(s.begin(),s.end());
     cout << "Previous Permutation : " << s << endl;
+    
+    // Max, Min, Swap
+    int a = 4, b = 7;
+    cout << "Max of a and b : " << max(a,b) << endl;
+    cout << "Min of a and b : " << min(a,b) << endl;
+    swap(a,b);
+    cout << "Swapped a and b : " << a << ", " << b << endl;
+    
+    // MIn and Max in vector
+    cout << "Min : " << *min_element(vec.begin(),vec.end()) << endl;
+    cout << "Max : " << *max_element(vec.begin(),vec.end()) << endl;
+    
+    // Binary Search
+    cout <<"Binary Search : " << binary_search(vec.begin(),vec.end(),12) << endl;
+
+    
     return 0;
 }
