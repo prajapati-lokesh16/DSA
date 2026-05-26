@@ -74,8 +74,20 @@ cout << "Min of a and b : " << min(a,b) << endl;
 ```
 
 # Min and Max in vector
-    ```c++
-    cout << "Min : " << *min_element(vec.begin(),vec.end()) << endl;
-    cout << "Max : " << *max_element(vec.begin(),vec.end()) << endl;
-    ```
-    
+```c++
+cout << "Min : " << *min_element(vec.begin(),vec.end()) << endl;
+cout << "Max : " << *max_element(vec.begin(),vec.end()) << endl;
+```
+
+# Bit Manipulation
+```c++
+int d = 15;
+long int e = 15;
+long long int f = 15;
+// for int
+cout << __builtin_popcount(d) << endl;
+// for long int
+cout << __builtin_popcountl(d) << endl;
+// for long long int
+cout << __builtin_popcountl(d) << endl;
+```

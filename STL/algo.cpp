@@ -78,6 +78,17 @@ int main()
     // Binary Search
     cout <<"Binary Search : " << binary_search(vec.begin(),vec.end(),12) << endl;
 
+
+    // Bit Manipulation
+    int d = 15;
+    long int e = 15;
+    long long int f = 15;
+    // for int
+    cout << __builtin_popcount(d) << endl;
+    // for long int
+    cout << __builtin_popcountl(d) << endl;
+    // for long long int
+    cout << __builtin_popcountl(d) << endl;
     
     return 0;
 }
