@@ -79,6 +79,11 @@ cout << "Min : " << *min_element(vec.begin(),vec.end()) << endl;
 cout << "Max : " << *max_element(vec.begin(),vec.end()) << endl;
 ```
 
+# Binary Search
+```c++
+cout <<"Binary Search : " << binary_search(vec.begin(),vec.end(),12) << endl;
+```
+
 # Bit Manipulation
 ```c++
 int d = 15;
