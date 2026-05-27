@@ -2,16 +2,37 @@
 #include<vector>
 using namespace std;
 
-bool search(vector<vector<int>> matrix,int m,int n,int target)
+
+bool RowSearch(vector<vector<int>> &matrix,int midRow,int n,int target)
 {
-    int StRow = 0,endRow = m-1,midRow = 0;
+    int stCol = 0,endCol = n-1;
+    while(stCol <= endCol)
+    {
+        int mid = stCol + (endCol - stCol)/2;
+        if(matrix[midRow][mid] == target)
+        {
+            return true;
+        }
+        else if(target > matrix[midRow][mid])
+        {
+            stCol = mid+1;
+        }
+        else{
+            endCol = mid -1;
+        }
+    }
+    return false;
+}
+
+bool search(vector<vector<int>> &matrix,int m,int n,int target)
+{
+    int StRow = 0,endRow = m-1;
     while(StRow <= endRow)
     {
         int mid = StRow + (endRow - StRow)/2;
         if(matrix[mid][0] <= target && target <= matrix[mid][n-1])
         {
-            midRow = mid;
-            break;
+           return RowSearch(matrix,mid,n,target);
         }
         else if(target > matrix[mid][n-1])
         {
@@ -22,22 +43,7 @@ bool search(vector<vector<int>> matrix,int m,int n,int target)
         }
     }
 
-    StRow = 0,endRow = n-1;
-    while(StRow <= endRow)
-    {
-        int mid = StRow + (endRow - StRow)/2;
-        if(matrix[midRow][mid] == target)
-        {
-            return true;
-        }
-        else if(target > matrix[midRow][mid])
-        {
-            StRow = mid+1;
-        }
-        else{
-            endRow = mid -1;
-        }
-    }
+    
 
     return false;
 }
