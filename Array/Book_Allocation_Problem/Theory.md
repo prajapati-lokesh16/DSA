@@ -107,3 +107,5 @@ int main()
 }
 ```
 
+## Time complexity
+O(NlogN)
