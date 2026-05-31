@@ -49,6 +49,22 @@ bool search(vector<vector<int>> &matrix,int m,int n,int target)
 }
 
 
+// Assuming the matrix as 1D Array
+bool searchOneD(vector<vector<int>> &matrix,int m,int n,int target)
+{
+    int l = 0,r = m*n -1;
+    while(l <= r)
+    {
+        int mid = l + (r - l)/2;
+        int row = mid / n;
+        int col = mid % n;
+        if(matrix[row][col] == target) return true;
+        else if(target < matrix[row][col]) r = mid - 1;
+        else l = mid + 1;
+    }
+    return false;
+}
+
 
 int main()
 {
@@ -58,6 +74,7 @@ int main()
         {23,30,34,60}
     };
 
-    cout<< search(matrix,3,4,60);
+    cout<< search(matrix,3,4,60) << endl;
+    cout << searchOneD(matrix,3,4,60);
     return 0;
 }
